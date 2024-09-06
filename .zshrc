@@ -120,6 +120,11 @@ bindkey \^U backward-kill-line
 export EDITOR=vim
 export LESS="-F -X -R"
 
+# Homebrew
+if [ -f "/opt/homebrew/bin/brew" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 # Aliases
 alias ll='ls -AlhF'
 alias df='df -h'
